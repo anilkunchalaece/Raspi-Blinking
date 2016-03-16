@@ -1,0 +1,49 @@
+Components Required :
+1.Raspberry Pi 2
+2. 3 Led's
+3. 3 220Ohm Resistors
+4. Jumper Cables
+
+Raspberry Pi GPIO Specifications
+
+Output Voltage : 3.3V
+Maximum Output Current : 16mA with Total Current From All Pins Not Exceeding 50Ma
+
+For Controlling a Led using Raspberry Pi, both Python and GPIO library is needed
+
+python GPIO library is Preinstalled if you are using Raspbian
+
+Please Refer to the Pinout Diagram for Raspberry Pi Pinout 
+and Schematic for Connections
+
+
+python has two different pin numbering schemes. This statement sets the numbering scheme you will be using.
+“GPIO.setmode(GPIO.BOARD)”
+
+
+The BCM scheme signifies the Broadcom pin number system, which uses the pin designations on the SoC chip. This system is more complicated because you have to figure out how the pin numbers translate to GPIO pin numbers.
+
+The BOARD scheme uses pin numbers marked on the GPIO header connector. It is better to use this scheme because you can simply count off the pin numbers on the header.
+
+Please Refer here for More Information
+http://www.petervis.com/Raspberry_PI/Raspberry_Pi_Blink_LED/Raspberry_Pi_Pin_Numbers.html
+
+
+Set Pin to Output Mode
+
+Before you can actually use the GPIO pin, you need to tell the processor that you will be using it for output. Hence, the following command sets pin  to output mode. This has to be set only once.
+
+“GPIO.setup(pin_num, GPIO.OUT)”
+
+
+Instructions To Run the Code :
+
+copy the Code to the Desktop
+
+change the Current Directory to Desktop using Command in Terminal
+
+cd Desktop
+
+and run the Code using
+
+sudo python raspB.py
